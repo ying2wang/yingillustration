@@ -3,7 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
-    <meta content="A growing collection of ready to use components for the CSS framework Bootstrap 5" name="description">
+    <meta property="og:title" content="YING WANG illustration">
+    <meta property="copyright" content="YING WANG">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="YING WANG illustration" />
+    <meta property="og:description" content="Hi, I'm Ying Wang, a Taiwanese illustrator who currently based in Taiwan. Food and plants are mainly my illustration topic." />
+    <meta property="og:url" content="http://yingillustration.com/" />
+    <meta property="og:site_name" content="YING WANG illustration" />
+    <meta property="og:image" content="http://yingillustration.com/img/01/01-001.jpeg" />
+    <meta content="Hi, I'm Ying Wang, a Taiwanese illustrator who currently based in Taiwan. Food and plants are mainly my illustration topic." name="description">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="YING WANG illustration" />
+    <meta name="twitter:description" content="Hi, I'm Ying Wang, a Taiwanese illustrator who currently based in Taiwan. Food and plants are mainly my illustration topic." />
+    <meta name="twitter:image" content="http://yingillustration.com/img/01/01-001.jpeg" />
     <link href="img/favicon.jpg" rel="apple-touch-icon" sizes="180x180">
     <link href="img/favicon.jpg" rel="icon" sizes="32x32" type="image/png">
     <link href="img/favicon.jpg" rel="icon" sizes="16x16" type="image/png">
@@ -54,7 +66,7 @@
     height:100vh;
     }
     .waterfallArea{
-    height:800px;
+    height:600px;
     width:100%;
     overflow:hidden;
     margin:0 auto;
@@ -62,19 +74,32 @@
     }
     .waterfallArea .content_box{
     float: left;
-    margin-bottom:10px;
-    margin-left: 5px;
-    margin-right:5px;
+    margin-bottom: 10px;
     overflow:hidden;
-    max-width:31%;
+    max-width:32%;
 
     }
     .waterfallArea .content_box img{
     width: 100%;
     }
+    .btn:hover{
+      border-color: #FFF; !important
+    }
+    .go_top{
+      display: none;
+    }
     @media (max-width: 767.98px) {
     .waterfallArea .content_box{
     max-width:100%;
+    }
+    .go_top{
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    #nav{
+      display: none;
     }
     }
     </style>
@@ -89,6 +114,7 @@
     transitionDuration: '0.5s', // 子元素轉場持續時間,預設'0.4s'
     stagger: 0, // 子元素轉場錯開時間，單位毫秒
     isAnimated: true,
+    gutter:10,
     });
     });
     //Fade Out the loading screen when all images loaded
@@ -99,20 +125,18 @@
     </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navScroll">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navScroll" tabindex="0">
+    <nav class="navbar navbar-expand navbar-light fixed-top" id="navScroll" tabindex="0">
       <div class="container">
-        <a class="navbar-brand pe-4 fs-4" href="index.html"><svg class="bi bi-layers-half" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-          <span class="ms-1 fw-bolder">YING WANG illustration</span></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="navbar-brand pe-2 ps-2 fs-4" href="index.html">
+          <span class="fw-bolder" >YING WANG illustration</span></a>
+            <ul class="navbar-nav me-auto" id="nav">
               <li class="nav-item">
-                <a aria-label="Brings you to the frontpage" class="nav-link" href="#services">Works</a>
+                <a class="nav-link" href="#services">Works</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#aboutus">About</a>
               </li>
             </ul>
-          </div>
         </div>
       </nav>
       <main>
@@ -156,6 +180,9 @@
                     </div>
                   </div>
                 </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
+                </div>
               </div>
               <div class="content_box">
                 <div type="button" class="btn" style="padding:0;" data-bs-toggle="modal" data-bs-target="#waterfall_02">
@@ -185,6 +212,9 @@
                     </div>
                   </div>
                 </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
+                </div>
               </div>
               <div class="content_box">
                 <div type="button" class="btn" style="padding:0;" data-bs-toggle="modal" data-bs-target="#waterfall_03">
@@ -212,6 +242,9 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
                 </div>
               </div>
               <div class="content_box">
@@ -242,6 +275,9 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
                 </div>
               </div>
               <div class="content_box">
@@ -315,6 +351,9 @@
                     </div>
                   </div>
                 </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
+                </div>
               </div>
               <div class="content_box">
                 <div type="button" class="btn" style="padding:0;" data-bs-toggle="modal" data-bs-target="#waterfall_06">
@@ -364,6 +403,9 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <button type="button"data-bs-dismiss="modal" aria-label="Close"><img src="img/arrow-button.png" alt="" style="width:50px;" class="go_top"></button>
                 </div>
               </div>
 
